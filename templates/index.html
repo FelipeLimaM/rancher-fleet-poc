@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>My Amazing Flask App</title>
+    </head>
+    <body>
+        <h1>Hello Rancher Fleet!</h1>
+        <p>Amazing website, so much content.</p>
+        <img id="dog" style="max-height: 500px;" src="" alt="Carregando...">
+    </body>
+    <script>
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then((resp) => resp.json())
+        .then((data) => {
+            console.log(data)
+            document.getElementById('dog').src = data.message
+        })
+    </script>
+</html>

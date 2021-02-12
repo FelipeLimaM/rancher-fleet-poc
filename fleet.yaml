@@ -1,0 +1,5 @@
+namespace: app-prd
+
+helm:
+  releaseName: flask-app
+  chart: "fleet-poc"
