@@ -6,8 +6,8 @@ replicaCount: 1
 
 hpaEnabled: true
 
-minReplicaCount: 1
-maxReplicaCount: 11
+minReplicaCount: 2
+maxReplicaCount: 15
 
 targetCPUUtilizationPercentage: 80
 
