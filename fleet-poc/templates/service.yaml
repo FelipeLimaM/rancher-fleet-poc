@@ -9,6 +9,7 @@ spec:
   ports:
     - protocol: TCP
       port: 5000
-      targetPort: {{ .Values.service.port }}
+      targetPort: 5000
+      nodePort: {{ .Values.service.port }}
   selector:
     {{- include "fleet-poc.selectorLabels" . | nindent 4 }}
