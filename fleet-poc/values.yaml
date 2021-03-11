@@ -2,7 +2,14 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 2
+replicaCount: 1
+
+hpaEnabled: true
+
+minReplicaCount: 1
+maxReplicaCount: 11
+
+targetCPUUtilizationPercentage: 80
 
 image:
   repository: gabrielbiasi/rancher-fleet-poc

@@ -5,7 +5,9 @@ metadata:
   labels:
     {{- include "fleet-poc.labels" . | nindent 4 }}
 spec:
+  {{- if not .Values.hpaEnabled }}
   replicas: {{ .Values.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "fleet-poc.selectorLabels" . | nindent 6 }}
